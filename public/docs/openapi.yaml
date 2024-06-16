@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: sikshapedia
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost/sks-reports'
+paths:
+  /api/v1/login:
+    post:
+      summary: ''
+      operationId: postApiV1Login
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: aut
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: braxton.jast@example.org
+              required:
+                - password
+                - email
+      security: []
+  /api/v2/login:
+    post:
+      summary: ''
+      operationId: postApiV2Login
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: quasi
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: kautzer.edna@example.com
+              required:
+                - password
+                - email
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
